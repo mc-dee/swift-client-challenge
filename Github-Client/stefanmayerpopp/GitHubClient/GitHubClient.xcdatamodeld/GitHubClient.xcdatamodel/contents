@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15D21" minimumToolsVersion="Automatic">
+    <entity name="Repository" representedClassName=".Repository" syncable="YES">
+        <attribute name="archive_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="assignees_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="blobs_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="branches_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="clone_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="collaborators_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="comments_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="commits_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="compare_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="contents_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="contributors_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="created_at" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="default_branch" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="deployments_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="description_val" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="downloads_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="events_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fork" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="forks" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="forks_count" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="forks_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="full_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="git_commits_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="git_refs_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="git_tags_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="git_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="has_downloads" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="has_issues" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="has_pages" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="has_wiki" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="homepage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hooks_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="html_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="issue_comment_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="issue_events_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="issues_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="keys_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="labels_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="language" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="languages_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="merges_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="milestones_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mirror_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="notifications_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="open_issues" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="open_issues_count" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="private_val" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="pulls_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pushed_at" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="releases_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="size" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="ssh_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="stargazers_count" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="stargazers_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="statuses_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="subscribers_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="subscription_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="svn_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tags_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="teams_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="trees_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="updated_at" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="watchers" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="watchers_count" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <relationship name="owner" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="repositories" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="User" representedClassName=".User" syncable="YES">
+        <attribute name="avatar_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="events_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="followers_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="following_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gists_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gravatar_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="html_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="login" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="organizations_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="received_events_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="repos_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="site_admin" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="starred_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="subscriptions_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="repositories" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Repository" inverseName="owner" inverseEntity="Repository" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Repository" positionX="-54" positionY="-9" width="128" height="1065"/>
+        <element name="User" positionX="-63" positionY="-18" width="128" height="315"/>
+    </elements>
+</model>
