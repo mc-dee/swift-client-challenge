@@ -32,6 +32,7 @@
 		379CB3801C96350A0070C3AD /* Ideen in Resources */ = {isa = PBXBuildFile; fileRef = 379CB37F1C96350A0070C3AD /* Ideen */; };
 		37ED11411C958BB500DA8273 /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37ED11401C958BB500DA8273 /* AsyncOperation.swift */; };
 		37ED11591C95A57D00DA8273 /* CoreDataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37ED11581C95A57D00DA8273 /* CoreDataMapper.swift */; };
+		9D0301B71C96C96800D792AC /* RepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0301B61C96C96800D792AC /* RepositoryCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		379CB37F1C96350A0070C3AD /* Ideen */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Ideen; sourceTree = "<group>"; };
 		37ED11401C958BB500DA8273 /* AsyncOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AsyncOperation.swift; path = API/Operations/AsyncOperation.swift; sourceTree = "<group>"; };
 		37ED11581C95A57D00DA8273 /* CoreDataMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataMapper.swift; path = API/Models/CoreDataMapper.swift; sourceTree = "<group>"; };
+		9D0301B61C96C96800D792AC /* RepositoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RepositoryCell.swift; path = UI/Cells/RepositoryCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +173,7 @@
 				374EBC1C1C9425BD00CF4FEB /* Assets.xcassets */,
 				374EBC161C9425BD00CF4FEB /* Main.storyboard */,
 				374EBC1E1C9425BD00CF4FEB /* LaunchScreen.storyboard */,
+				9D0301B51C96C93E00D792AC /* Cells */,
 				3759B10B1C943C9B00EACD22 /* Textfields */,
 			);
 			name = UI;
@@ -251,6 +254,14 @@
 			children = (
 			);
 			name = Utilities;
+			sourceTree = "<group>";
+		};
+		9D0301B51C96C93E00D792AC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9D0301B61C96C96800D792AC /* RepositoryCell.swift */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -403,6 +414,7 @@
 				37ED11411C958BB500DA8273 /* AsyncOperation.swift in Sources */,
 				378D593F1C94512200ADB7BF /* User+CoreDataProperties.swift in Sources */,
 				378D593E1C94512200ADB7BF /* Repository+CoreDataProperties.swift in Sources */,
+				9D0301B71C96C96800D792AC /* RepositoryCell.swift in Sources */,
 				37ED11591C95A57D00DA8273 /* CoreDataMapper.swift in Sources */,
 				378D594A1C946A7400ADB7BF /* SearchButton.swift in Sources */,
 				3759B1161C94498700EACD22 /* GitHubAPIUser.swift in Sources */,

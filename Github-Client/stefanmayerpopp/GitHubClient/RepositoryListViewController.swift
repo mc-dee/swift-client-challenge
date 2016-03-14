@@ -53,33 +53,7 @@ class RepositoryListViewController: UIViewController, UITableViewDataSource, UIT
         setNeedsStatusBarAppearanceUpdate()
     }
     
-    // MARK: Configure cell
-    /**
-    Configures a given cell for given index path
     
-    - parameter cell:      UITableViewCell to configure
-    - parameter indexPath: indexPath of given cell
-    */
-    private func configure(cell cell: UITableViewCell, atIndexPath indexPath: NSIndexPath) {
-        // Get cell
-        let repository = repositories![indexPath.row]
-
-        // Subdetail string
-        var detailLabel = "⭐️ \(repository.stargazers_count!) - "
-        if case let desc = repository.description_val where desc?.characters.count > 0 {
-            detailLabel += desc!
-        } else {
-            detailLabel += "Keine Beschreibung vorhanden 😕"
-        }
-        cell.detailTextLabel?.text = detailLabel
-        
-        // Get description val
-        cell.textLabel?.text = repository.name
-        
-        // Some transparency
-        cell.backgroundColor = UIColor.clearColor()
-        cell.backgroundView?.backgroundColor = UIColor.clearColor()
-    }
     
     // MARK: View presentation styles
     /**
@@ -111,11 +85,11 @@ class RepositoryListViewController: UIViewController, UITableViewDataSource, UIT
      - parameter tableView: tableView whos is asking for cell
      - parameter indexPath: indexPath of cell
      
-     - returns: <#return value description#>
+     - returns: configured cepository cell
      */
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("repoCell", forIndexPath: indexPath)
-        configure(cell: cell, atIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("repoCell", forIndexPath: indexPath) as! RepositoryCell
+        cell.configure(forRepository: repositories![indexPath.row])
         return cell
     }
     

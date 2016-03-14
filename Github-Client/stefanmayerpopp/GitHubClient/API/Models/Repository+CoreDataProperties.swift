@@ -81,6 +81,6 @@ extension Repository {
     @NSManaged var url: String?
     @NSManaged var watchers: NSNumber?
     @NSManaged var watchers_count: NSNumber?
-    @NSManaged var user: User?
+    @NSManaged var owner: User?
 
 }

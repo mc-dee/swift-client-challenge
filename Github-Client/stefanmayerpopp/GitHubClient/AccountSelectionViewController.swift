@@ -143,7 +143,12 @@ class AccountSelectionViewController: UIViewController, UITextFieldDelegate {
     - returns: Prevents dimiss of keyboard if required textfield is not fulfilled
     */
     func textFieldShouldReturn(textField: UITextField) -> Bool {
-        return isTextFieldFulfilled(textField)
+        guard isTextFieldFulfilled(textField) else {
+            return false
+        }
+        
+        showRepositories(forUsername: txtFieldUsername.text!)
+        return true
     }
 }
 
