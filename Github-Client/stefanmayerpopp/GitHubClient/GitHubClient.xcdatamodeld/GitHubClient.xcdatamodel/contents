@@ -12,7 +12,11 @@
         <attribute name="compare_url" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="contents_url" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="contributors_url" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="created_at" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="created_at" optional="YES" attributeType="Date" syncable="YES">
+            <userInfo>
+                <entry key="transform" value="DateFormatISO8601"/>
+            </userInfo>
+        </attribute>
         <attribute name="default_branch" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="deployments_url" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="description_val" optional="YES" attributeType="String" syncable="YES"/>
@@ -51,7 +55,11 @@
         <attribute name="open_issues_count" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="private_val" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="pulls_url" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="pushed_at" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="pushed_at" optional="YES" attributeType="Date" syncable="YES">
+            <userInfo>
+                <entry key="transform" value="DateFormatISO8601"/>
+            </userInfo>
+        </attribute>
         <attribute name="releases_url" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="size" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="ssh_url" optional="YES" attributeType="String" syncable="YES"/>
@@ -69,6 +77,9 @@
         <attribute name="watchers" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="watchers_count" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <relationship name="owner" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="repositories" inverseEntity="User" syncable="YES"/>
+        <userInfo>
+            <entry key="transform" value="DateFormatISO8601"/>
+        </userInfo>
     </entity>
     <entity name="User" representedClassName=".User" syncable="YES">
         <attribute name="avatar_url" optional="YES" attributeType="String" syncable="YES"/>

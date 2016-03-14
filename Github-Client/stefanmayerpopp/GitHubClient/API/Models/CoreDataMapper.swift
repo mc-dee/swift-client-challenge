@@ -79,6 +79,7 @@ class CoreDataMapper<T: NSManagedObject> {
             // We need to get the attribute type, so we can decide
             // which class is required for initialization
             let attributeType = attribute.1.attributeType
+            print(attribute.1.userInfo)
             switch attributeType {
             case .UndefinedAttributeType:
                 print("UndefinedAttributeType is not implemented - \(attributeName)")

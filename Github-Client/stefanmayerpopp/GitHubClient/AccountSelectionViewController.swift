@@ -129,6 +129,7 @@ class AccountSelectionViewController: UIViewController, UITextFieldDelegate {
         if segue.identifier == "repoList" {
             let destinationViewController = segue.destinationViewController as? RepositoryListViewController
             destinationViewController?.repositories = sender as? [Repository]
+            destinationViewController?.username = txtFieldUsername.text
             return
         }
     }

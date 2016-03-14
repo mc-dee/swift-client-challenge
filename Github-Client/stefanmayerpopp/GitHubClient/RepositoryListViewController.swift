@@ -14,6 +14,9 @@ class RepositoryListViewController: UIViewController, UITableViewDataSource, UIT
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var switchSourcesOnly: UISwitch!
     
+    /// Name of the user or org
+    var username: String!
+    
     /// Unfiltered repositories is used as internal variable, so we can filter easily
     private var _unfilteredRepositories: [Repository]?
     /** 
