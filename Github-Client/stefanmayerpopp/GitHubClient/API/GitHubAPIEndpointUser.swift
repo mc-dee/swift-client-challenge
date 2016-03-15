@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GitHubAPIUser {
+class GitHubAPIEndpointUser {
     /// Completion block which is called on repo list called
     typealias RepositoryListCompletion = ([Repository]?, NSError?) -> ()
     
@@ -18,9 +18,9 @@ class GitHubAPIUser {
      - parameter username:   Name of the user
      - parameter completion: Completiton block which includes wrapped API call result
      */
-    static func repositoryList(forUsername username: String, completion: RepositoryListCompletion) {
+    static func repositoryList(forUsername username: String, completion: RepositoryListCompletion) -> GitHubAPIRequest {
         // Call repo api with username
-        GitHubAPI.request(endpoint: GitHubAPIEndpoint.Users.Repos(username)).responseJSON { (response) -> Void in
+        return GitHubAPI.request(endpoint: GitHubAPIEndpoint.Users.Repos(username)).responseJSON { (response) -> Void in
             // Check result
             switch response.result {
             case .Failure(let error):

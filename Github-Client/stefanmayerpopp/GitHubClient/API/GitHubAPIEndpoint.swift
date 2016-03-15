@@ -14,17 +14,6 @@ import Foundation
  *  Not ultra smart in flexibility, but a nice showcase of associated values
  */
 struct GitHubAPIEndpoint {
-    // /users
-    enum Users: GitHubEndPoint {
-        typealias Username = String
-
-        /**
-         Returns repositories endpoint for username
-         
-         - username
-         */
-        case Repos(Username)
-    }
     
     // /orgs
     enum Orgs: GitHubEndPoint {
@@ -51,6 +40,26 @@ struct GitHubAPIEndpoint {
          */
         case Repos(Owner, Repo)
     }
+    
+    // /search 
+    enum Search: GitHubEndPoint {
+        typealias Username = String
+        
+        case Users(Username)
+    }
+    
+    // /users
+    enum Users: GitHubEndPoint {
+        typealias Username = String
+        
+        /**
+         Returns repositories endpoint for username
+         
+         - username
+         */
+        case Repos(Username)
+    }
+    
 }
 
 /**
@@ -73,18 +82,6 @@ extension GitHubEndPoint {
     var string: String {
         assert(false, "Implement me")
         return "Implement me"
-    }
-}
-
-/**
- *  Users endpoint
- */
-extension GitHubAPIEndpoint.Users {
-    var string: String {
-        switch self {
-        case .Repos(let username):
-            return "/users/\(username)/repos"
-        }
     }
 }
 
@@ -112,6 +109,26 @@ extension GitHubAPIEndpoint.Repos {
     }
 }
 
+/**
+ *  Search endpoint
+ */
+extension GitHubAPIEndpoint.Search {
+    var string: String {
+        switch self {
+        case Users(let username): // GET /search/users?q=:username
+            return "/search/users?q=\(username)"
+        }
+    }
+}
 
-
-
+/**
+ *  Users endpoint
+ */
+extension GitHubAPIEndpoint.Users {
+    var string: String {
+        switch self {
+        case .Repos(let username):
+            return "/users/\(username)/repos"
+        }
+    }
+}

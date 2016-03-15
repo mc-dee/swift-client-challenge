@@ -52,8 +52,8 @@ class GitHubAPI {
     static func request(endpoint endpoint: GitHubEndPoint) -> GitHubAPIRequest {
         // Initialize API
         let api = GitHubAPI()
-        // Build target url
-        let targetURL = api.apiURLString + endpoint.string
+        // Build target url, strip white spaces
+        let targetURL = (api.apiURLString + endpoint.string).stringByReplacingOccurrencesOfString(" ", withString: "")
         // Create request URL
         let requestURL = NSURLRequest(URL: NSURL(string: targetURL)!)
         // Return request

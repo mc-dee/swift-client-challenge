@@ -51,9 +51,25 @@ class RepositoryListViewController: UIViewController, UITableViewDataSource, UIT
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         setNeedsStatusBarAppearanceUpdate()
+        
+        // set username
+        lblUsername.text = username
     }
     
-    
+    // MARK: Segue handling
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "repoDetail" {
+            let destinationViewController = segue.destinationViewController as? RepositoryDetailViewController
+            // We need the cell to get the index path of the sender
+            guard let cell = sender as? UITableViewCell else { return }
+            // Get index path for sender
+            guard let indexPathForSelectedCell = tableView.indexPathForCell(cell) else { return }
+            // Get repository by index path row
+            guard let repository = repositories?[indexPathForSelectedCell.row]  else { return}
+            // Assign repository to detail view controller
+            destinationViewController?.repository = repository
+        }
+    }
     
     // MARK: View presentation styles
     /**
@@ -93,6 +109,17 @@ class RepositoryListViewController: UIViewController, UITableViewDataSource, UIT
         return cell
     }
     
+    // MARK: UITableViewDelegate
+    /**
+     Deselect row after touch
+     
+     - parameter tableView: tableView where cell has been touched
+     - parameter indexPath: path of cell which has been touched
+     */
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
+    
     // MARK: User actions
     /**
     Send user back to previous view controller
@@ -100,7 +127,6 @@ class RepositoryListViewController: UIViewController, UITableViewDataSource, UIT
     - parameter sender: Hopefully a button
     */
     @IBAction func backButtonTouched(sender: UIButton) {
-        // TODO: Flash databae?
         self.navigationController?.popViewControllerAnimated(true)
     }
     

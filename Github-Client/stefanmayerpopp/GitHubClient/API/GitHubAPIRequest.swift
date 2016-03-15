@@ -140,6 +140,13 @@ class GitHubAPIRequest {
     }
     
     /**
+     Cancel running operation or task
+     */
+    func cancel() {
+        task?.cancel()
+    }
+    
+    /**
      Convenience method to create reponse object with required data
      
      - parameter URLResponse: Response of response
@@ -155,8 +162,9 @@ class GitHubAPIRequest {
         result: GitHubAPIResult<AnyObject>,
         data: NSData? = nil
         ) -> GitHubAPIResponse<AnyObject> {
+            
         return GitHubAPIResponse<AnyObject>(
-            response: (URLResponse as! NSHTTPURLResponse),
+            response: (URLResponse as? NSHTTPURLResponse) ?? nil, // If object is present, cast to NSHTTPURLResponse
             request: request,
             result: result,
             data: data

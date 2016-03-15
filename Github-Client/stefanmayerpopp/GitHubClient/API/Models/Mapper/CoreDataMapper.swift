@@ -79,7 +79,6 @@ class CoreDataMapper<T: NSManagedObject> {
             // We need to get the attribute type, so we can decide
             // which class is required for initialization
             let attributeType = attribute.1.attributeType
-            print(attribute.1.userInfo)
             switch attributeType {
             case .UndefinedAttributeType:
                 print("UndefinedAttributeType is not implemented - \(attributeName)")
@@ -104,6 +103,7 @@ class CoreDataMapper<T: NSManagedObject> {
                 continue
             }
             
+            // Readd _val string to attribute name if present, before setting value to attribute
             if hasValSuffix {
                 attributeName = attributeName.stringByAppendingString("_val")
             }
@@ -139,19 +139,72 @@ class CoreDataMapper<T: NSManagedObject> {
                 continue
             }
             
+            /**
+             Method creates and returns an related object of managedObject
+             
+             - parameter value:                Values for related object
+             - parameter entityDescription:    Entity description of the target NSManagedObject
+             - parameter managedObjectContext: Object content in which the object should be created
+             
+             - returns: An created managed object
+             */
             func relatedObject(forValues value: [String : AnyObject], entityDescription: NSEntityDescription, inManagedObjectContext managedObjectContext: NSManagedObjectContext) -> NSManagedObject {
+                // Create object
                 let relatedManagedObject = NSEntityDescription.insertNewObjectForEntityForName(entityDescription.name!, inManagedObjectContext: managedObject.managedObjectContext!)
+                
+                // Set values from dictionary to related object
                 self.setValues(fromDictionary: value, onManagedObject: relatedManagedObject)
+
+                // Return created managed object
                 return relatedManagedObject
             }
             
+            // Check if relationship is to-many or one-to-one
             if !relationshipDescription.toMany {
+                
+                // Check if we really have an array of String:AnyObject dictionary
+                guard let relationValue = relationValue as? [String : AnyObject] else {
+                    print("Ups, couldnt not get dictionary for \(relationshipName)")
+                    continue
+                }
+                
+                // Creates and NSManagedObject of the relationship destinationy entity
                 let relatedObject = relatedObject(
-                    forValues: relationValue as! [String : AnyObject],
+                    forValues: relationValue,
                     entityDescription: destinationEntity,
                     inManagedObjectContext: managedObject.managedObjectContext!
                 )
+                
+                // Set object to one-to-one relation
                 (managedObject as NSManagedObject).setValue(relatedObject, forKey: relationshipName)
+            } else {
+                // Check if we really have an array of String:AnyObject dictionary
+                guard let relationValue = relationValue as? [[String : AnyObject]] else {
+                    print("Ups, couldnt not get dictionary for \(relationshipName)")
+                    continue
+                }
+
+                // Array in which created objects will be stored
+                var relatedObjects: [NSManagedObject] = []
+                
+                // Create an NSMangedObject for each value
+                for relationValue in relationValue {
+                    let relatedObject = relatedObject(
+                        forValues: relationValue,
+                        entityDescription: destinationEntity,
+                        inManagedObjectContext: managedObject.managedObjectContext!
+                    )
+                    relatedObjects.append(relatedObject)
+                }
+                
+                // Get current set of relation ship
+                guard let toManyRelation = managedObject.valueForKeyPath(relationshipName) as? NSMutableSet else {
+                    print("Could not get keypath for relation \(relationshipName)")
+                    continue
+                }
+                
+                // Add objects to relation in present set of NSManagedObject
+                toManyRelation.addObjectsFromArray(relatedObjects)
             }
         }
     }

@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class GitHubAPIOrg {
+class GitHubAPIEndpointOrg {
     typealias RepositoryListCompletion = ([Repository]?, NSError?) -> ()
 
     /**
@@ -18,9 +18,9 @@ class GitHubAPIOrg {
      - parameter username:   Name of the organization
      - parameter completion: Completiton block which includes wrapped API call result
      */
-    static func repositoryList(forOrganizationName orgName: String, completion: RepositoryListCompletion) {
+    static func repositoryList(forOrganizationName orgName: String, completion: RepositoryListCompletion) -> GitHubAPIRequest {
         // Call repo api with organization name
-        GitHubAPI.request(endpoint: GitHubAPIEndpoint.Orgs.Repos(orgName)).responseJSON { (response) -> Void in
+        return GitHubAPI.request(endpoint: GitHubAPIEndpoint.Orgs.Repos(orgName)).responseJSON { (response) -> Void in
             // Check result
             switch response.result {
             case .Failure(let error):
