@@ -15,6 +15,7 @@ class AccountSelectionViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var btnShowRepositories: SearchButton!
     @IBOutlet weak var tblViewUserSearch: UITableView!
     @IBOutlet weak var CstrTblViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var imgViewGitHubLogo: UIImageView!
     
     // MARK: Variables and constants
     var userSuggestions: [User]?
@@ -43,6 +44,11 @@ class AccountSelectionViewController: UIViewController, UITextFieldDelegate {
         
         // If view is reentered from a detail view, we reenable the show button
         btnShowRepositories.setButton(enabled: true)
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        applyRippleEffect(onImageView: imgViewGitHubLogo)
     }
     
     // MARK: Repository and API
@@ -186,6 +192,12 @@ class AccountSelectionViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
+    /**
+     Returns the maximum height for the drawable content size of the user
+     suggest table view
+     
+     - returns: height for table view
+     */
     func usersSearchSuggestTableViewHeight() -> CGFloat {
         // Default cell height
         let cellHeight = 30.0

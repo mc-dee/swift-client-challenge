@@ -155,6 +155,7 @@
                     <connections>
                         <outlet property="CstrTblViewHeight" destination="Kpy-pV-BZi" id="KUm-zs-uSz"/>
                         <outlet property="btnShowRepositories" destination="Zze-gb-vww" id="vii-45-TeI"/>
+                        <outlet property="imgViewGitHubLogo" destination="TQ6-Gz-7xs" id="RmW-RO-Js7"/>
                         <outlet property="tblViewUserSearch" destination="290-Pp-F28" id="6ef-NT-GDE"/>
                         <outlet property="txtFieldUsername" destination="Frh-Xv-8Nj" id="Bm1-ol-qeN"/>
                         <segue destination="rLZ-qQ-I2e" kind="show" identifier="repoList" id="WAd-10-N2c"/>

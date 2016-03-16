@@ -141,3 +141,19 @@ extension AccountSelectionViewController : UITableViewDelegate, UITableViewDataS
         return true
     }
 }
+
+// Animations for the github image
+extension AccountSelectionViewController {
+    
+    func applyRippleEffect(onImageView imageView: UIImageView, duration: Double = 15.0) {
+        // Ripple
+        imageView.layer.removeAllAnimations()
+        let animationTransition = CATransition()
+        animationTransition.duration = duration
+        animationTransition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
+        animationTransition.type = "rippleEffect" // private api :)
+        animationTransition.repeatCount = Float.infinity
+        imageView.layer.addAnimation(animationTransition, forKey: nil)
+
+    }
+}
