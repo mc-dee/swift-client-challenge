@@ -1,0 +1,358 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F232026A1C935D8F009F5579 /* RepositoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23202691C935D8F009F5579 /* RepositoryTableViewController.swift */; };
+		F24F53351C909E7900D5EBD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24F53341C909E7900D5EBD4 /* AppDelegate.swift */; };
+		F24F533C1C909E7900D5EBD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F24F533B1C909E7900D5EBD4 /* Assets.xcassets */; };
+		F24F533F1C909E7900D5EBD4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F24F533D1C909E7900D5EBD4 /* LaunchScreen.storyboard */; };
+		F24F53571C90A00B00D5EBD4 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24F53561C90A00B00D5EBD4 /* APIClient.swift */; };
+		F24F535E1C90B6F700D5EBD4 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24F535D1C90B6F700D5EBD4 /* Repository.swift */; };
+		F24F53601C90BC7E00D5EBD4 /* LabelsPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24F535F1C90BC7E00D5EBD4 /* LabelsPresentable.swift */; };
+		F24F53691C9153D100D5EBD4 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24F53681C9153D100D5EBD4 /* TableViewController.swift */; };
+		F2CADDE01C989F5D0062781F /* GithubURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CADDDF1C989F5D0062781F /* GithubURL.swift */; };
+		F2CADDE21C98A7750062781F /* CellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CADDE11C98A7750062781F /* CellProtocol.swift */; };
+		F2CADDE41C98AA830062781F /* UserSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CADDE31C98AA830062781F /* UserSearchTableViewController.swift */; };
+		F2CADDE61C98AE8D0062781F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CADDE51C98AE8D0062781F /* User.swift */; };
+		F2E169A51C95CF7A00E7CF1A /* RepositoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E169A41C95CF7A00E7CF1A /* RepositoryTableViewCell.swift */; };
+		F2E169A71C96056C00E7CF1A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E169A61C96056C00E7CF1A /* DetailViewController.swift */; };
+		F2E169AA1C9605AB00E7CF1A /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E169A91C9605AB00E7CF1A /* DetailView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F23202691C935D8F009F5579 /* RepositoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RepositoryTableViewController.swift; path = List/RepositoryTableViewController.swift; sourceTree = "<group>"; };
+		F24F53311C909E7900D5EBD4 /* Dasdom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dasdom.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F24F53341C909E7900D5EBD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F24F533B1C909E7900D5EBD4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F24F533E1C909E7900D5EBD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F24F53401C909E7900D5EBD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F24F53561C90A00B00D5EBD4 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIClient.swift; path = Networking/APIClient.swift; sourceTree = "<group>"; };
+		F24F535D1C90B6F700D5EBD4 /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		F24F535F1C90BC7E00D5EBD4 /* LabelsPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LabelsPresentable.swift; path = List/LabelsPresentable.swift; sourceTree = "<group>"; };
+		F24F53681C9153D100D5EBD4 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		F2CADDDF1C989F5D0062781F /* GithubURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GithubURL.swift; path = Networking/GithubURL.swift; sourceTree = "<group>"; };
+		F2CADDE11C98A7750062781F /* CellProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellProtocol.swift; path = List/CellProtocol.swift; sourceTree = "<group>"; };
+		F2CADDE31C98AA830062781F /* UserSearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserSearchTableViewController.swift; path = UserSearch/UserSearchTableViewController.swift; sourceTree = "<group>"; };
+		F2CADDE51C98AE8D0062781F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F2E169A41C95CF7A00E7CF1A /* RepositoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RepositoryTableViewCell.swift; path = List/RepositoryTableViewCell.swift; sourceTree = "<group>"; };
+		F2E169A61C96056C00E7CF1A /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = Detail/DetailViewController.swift; sourceTree = "<group>"; };
+		F2E169A91C9605AB00E7CF1A /* DetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailView.swift; path = Detail/DetailView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F24F532E1C909E7900D5EBD4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F24939271C9DEC4300CD502A /* UserSearch */ = {
+			isa = PBXGroup;
+			children = (
+				F2CADDE31C98AA830062781F /* UserSearchTableViewController.swift */,
+			);
+			name = UserSearch;
+			sourceTree = "<group>";
+		};
+		F24F53281C909E7900D5EBD4 = {
+			isa = PBXGroup;
+			children = (
+				F24F53331C909E7900D5EBD4 /* Dasdom */,
+				F24F53321C909E7900D5EBD4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F24F53321C909E7900D5EBD4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F24F53311C909E7900D5EBD4 /* Dasdom.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F24F53331C909E7900D5EBD4 /* Dasdom */ = {
+			isa = PBXGroup;
+			children = (
+				F24F53341C909E7900D5EBD4 /* AppDelegate.swift */,
+				F24F535D1C90B6F700D5EBD4 /* Repository.swift */,
+				F2CADDE51C98AE8D0062781F /* User.swift */,
+				F24F53681C9153D100D5EBD4 /* TableViewController.swift */,
+				F24939271C9DEC4300CD502A /* UserSearch */,
+				F24F53581C90A0AA00D5EBD4 /* Networking */,
+				F24F53611C90BCE800D5EBD4 /* List */,
+				F2E169A81C96057E00E7CF1A /* Detail */,
+				F24F533B1C909E7900D5EBD4 /* Assets.xcassets */,
+				F24F533D1C909E7900D5EBD4 /* LaunchScreen.storyboard */,
+				F24F53401C909E7900D5EBD4 /* Info.plist */,
+			);
+			path = Dasdom;
+			sourceTree = "<group>";
+		};
+		F24F53581C90A0AA00D5EBD4 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				F24F53561C90A00B00D5EBD4 /* APIClient.swift */,
+				F2CADDDF1C989F5D0062781F /* GithubURL.swift */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		F24F53611C90BCE800D5EBD4 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				F24F535F1C90BC7E00D5EBD4 /* LabelsPresentable.swift */,
+				F2CADDE11C98A7750062781F /* CellProtocol.swift */,
+				F23202691C935D8F009F5579 /* RepositoryTableViewController.swift */,
+				F2E169A41C95CF7A00E7CF1A /* RepositoryTableViewCell.swift */,
+			);
+			name = List;
+			sourceTree = "<group>";
+		};
+		F2E169A81C96057E00E7CF1A /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				F2E169A61C96056C00E7CF1A /* DetailViewController.swift */,
+				F2E169A91C9605AB00E7CF1A /* DetailView.swift */,
+			);
+			name = Detail;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F24F53301C909E7900D5EBD4 /* Dasdom */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F24F534E1C909E7A00D5EBD4 /* Build configuration list for PBXNativeTarget "Dasdom" */;
+			buildPhases = (
+				F24F532D1C909E7900D5EBD4 /* Sources */,
+				F24F532E1C909E7900D5EBD4 /* Frameworks */,
+				F24F532F1C909E7900D5EBD4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Dasdom;
+			productName = Dasdom;
+			productReference = F24F53311C909E7900D5EBD4 /* Dasdom.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F24F53291C909E7900D5EBD4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = dasdom;
+				TargetAttributes = {
+					F24F53301C909E7900D5EBD4 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+				};
+			};
+			buildConfigurationList = F24F532C1C909E7900D5EBD4 /* Build configuration list for PBXProject "Dasdom" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F24F53281C909E7900D5EBD4;
+			productRefGroup = F24F53321C909E7900D5EBD4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F24F53301C909E7900D5EBD4 /* Dasdom */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F24F532F1C909E7900D5EBD4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F24F533F1C909E7900D5EBD4 /* LaunchScreen.storyboard in Resources */,
+				F24F533C1C909E7900D5EBD4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F24F532D1C909E7900D5EBD4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2CADDE61C98AE8D0062781F /* User.swift in Sources */,
+				F2E169A71C96056C00E7CF1A /* DetailViewController.swift in Sources */,
+				F2E169A51C95CF7A00E7CF1A /* RepositoryTableViewCell.swift in Sources */,
+				F2E169AA1C9605AB00E7CF1A /* DetailView.swift in Sources */,
+				F24F53601C90BC7E00D5EBD4 /* LabelsPresentable.swift in Sources */,
+				F24F53691C9153D100D5EBD4 /* TableViewController.swift in Sources */,
+				F24F53351C909E7900D5EBD4 /* AppDelegate.swift in Sources */,
+				F2CADDE01C989F5D0062781F /* GithubURL.swift in Sources */,
+				F24F535E1C90B6F700D5EBD4 /* Repository.swift in Sources */,
+				F232026A1C935D8F009F5579 /* RepositoryTableViewController.swift in Sources */,
+				F2CADDE21C98A7750062781F /* CellProtocol.swift in Sources */,
+				F2CADDE41C98AA830062781F /* UserSearchTableViewController.swift in Sources */,
+				F24F53571C90A00B00D5EBD4 /* APIClient.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F24F533D1C909E7900D5EBD4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F24F533E1C909E7900D5EBD4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F24F534C1C909E7A00D5EBD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F24F534D1C909E7A00D5EBD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F24F534F1C909E7A00D5EBD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Dasdom/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.swiftandpainless.Dasdom;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F24F53501C909E7A00D5EBD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Dasdom/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.swiftandpainless.Dasdom;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F24F532C1C909E7900D5EBD4 /* Build configuration list for PBXProject "Dasdom" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F24F534C1C909E7A00D5EBD4 /* Debug */,
+				F24F534D1C909E7A00D5EBD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F24F534E1C909E7A00D5EBD4 /* Build configuration list for PBXNativeTarget "Dasdom" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F24F534F1C909E7A00D5EBD4 /* Debug */,
+				F24F53501C909E7A00D5EBD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F24F53291C909E7900D5EBD4 /* Project object */;
+}
