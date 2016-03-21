@@ -96,6 +96,7 @@
 		379CB3B61C9746F40070C3AD /* AccountSelectionViewController+SuggestionTableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AccountSelectionViewController+SuggestionTableViewExtension.swift"; sourceTree = "<group>"; };
 		379CB3B81C97561B0070C3AD /* UsersSearchResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UsersSearchResultCell.swift; path = UI/Cells/UsersSearchResultCell.swift; sourceTree = "<group>"; };
 		9D0301B61C96C96800D792AC /* RepositoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RepositoryCell.swift; path = UI/Cells/RepositoryCell.swift; sourceTree = "<group>"; };
+		9DFF42521C9FECE500E5FC3C /* License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = License.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +127,7 @@
 		374EBC061C9425BD00CF4FEB = {
 			isa = PBXGroup;
 			children = (
+				9DFF42521C9FECE500E5FC3C /* License.txt */,
 				374EBC111C9425BD00CF4FEB /* GitHubClient */,
 				374EBC291C9425BD00CF4FEB /* GitHubClientTests */,
 				374EBC341C9425BD00CF4FEB /* GitHubClientUITests */,
