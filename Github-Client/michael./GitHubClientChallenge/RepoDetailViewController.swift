@@ -1,10 +1,10 @@
-// -------------------------------------------------------
+// ---------------------------------------------------
 //  RepoDetailViewController.swift
 //  GitHubClientChallenge
 //
 //  Created by Michael on 19.03.2016.
-//  Copyright © 2016 Michael Fenske. All rights reserved.
-// -------------------------------------------------------
+//  Copyright © 2016 Michael Fenske. See LICENSE.txt.
+// ---------------------------------------------------
 
 
 import UIKit
