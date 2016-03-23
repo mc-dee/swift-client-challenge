@@ -29,7 +29,7 @@ public extension HeaderType {
 }
 
 public protocol Endpoint: UrlParameterType, HeaderType {
-	typealias ObjectType: Mappable
+	associatedtype ObjectType: Mappable
 	
 	var path: String { get }
 }

@@ -14,13 +14,13 @@ import Helper
 // MARK: - Protocols
 
 public protocol ViewModelType {
-	typealias ObjectType: Mappable, Identifiable
+	associatedtype ObjectType: Mappable, Identifiable
 	
 	init(model: ObjectType)
 }
 
 public protocol Cell: class {
-	typealias ViewModel: ViewModelType
+	associatedtype ViewModel: ViewModelType
 	
 	static func heightWithModel(model: ViewModel.ObjectType) -> CGFloat
 	
